@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Animal {
+    constructor(public name:string) {
+    }
+
+    move(distance) {
+        alert(this.name + " moved " + distance + "km.");
+    }
+
+    makeSound() { 
+        alert(this.name + " makes sound");
+    }
+}
+
+class Snake extends Animal {
+    move() {
+        alert(this.name + " is Slithering...");
+        super.move(5);
+    }
+    makeSound() { 
+        alert(this.name + " is making hissss...");
+        super.makeSound();
+    }
+}
+
+class Horse extends Animal {
+    move() {
+        alert(this.name + " is Galloping...");
+        super.move(45);
+    }
+
+    makeSound() { 
+        alert(this.name + " is making hoonna...");
+        super.makeSound();
+    }
+}
+
+class Dog extends Animal {
+    move() {
+        alert(this.name + " is Barking...");
+        super.move(45);
+    }
+
+    makeSound() { 
+        alert(this.name + " is making bowwow...");
+        super.makeSound();
+    }
+}
+
+class Tiger extends Animal {
+    move() {
+        alert(this.name + " is Hwanking...");
+        super.move(45);
+    }
+
+    makeSound() { 
+        alert(this.name + " is making haangaa...");
+        super.makeSound();
+    }
+}
+
+var sam = new Snake("Sammy the Python");
+var tom: Animal = new Horse("Tommy the Palomino");
+var tam: Animal = new Dog("Tommy the Dog");
+var sher: Animal = new Tiger("Sherkhan the Tiger");
+
+sam.move();
+sam.makeSound();
+tom.move(34);
+tom.makeSound();
+tam.move(60);
+tam.makeSound();
+sher.move(40);
+sher.makeSound();
+</script>
+</body>
+</html>
